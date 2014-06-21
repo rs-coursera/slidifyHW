@@ -1,0 +1,54 @@
+---
+title       : Car mileage analysis
+subtitle    : How much mileage depends on engine and transmission type
+author      : rs-coursera
+job         : Coursera Student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+--- .class #id 
+
+## mtcars data
+
+* Not so many cars in the dataset
+* Not so many parameters
+
+* Pretty much tidy dataset
+* Good to learn plotting and other things
+
+--- .class #id
+
+## So what we can do?
+
+We can start learning about the data
+```{r}
+head(mtcars)
+```
+
+--- .class #id
+
+## Begin with the regressions
+
+```{r}
+fit<-lm(mpg~am+cyl+disp, data=mtcars)
+summary(fit)
+```
+
+--- .class #id
+
+## Do some nice plots
+```{r echo=F, fig.height=6, fig.width=10}
+library(ggplot2)
+mpgData <- mtcars
+mpgData$am <- factor(mpgData$am, labels = c("Automatic", "Manual"))
+gp <- ggplot(data=mpgData, 
+             aes(x=disp, y=mpg, 
+                              colour=am), 
+             main="Fuel consumption by engine size",
+             xlab = "Displacement", ylab="Miles per gallon") 
+gp + geom_point() + stat_smooth(method="lm")
+```
+* And see, where is your car
