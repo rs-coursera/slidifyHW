@@ -1,5 +1,5 @@
 ---
-title       : Car mileage analysis
+title       : Car mileage analysis application
 subtitle    : How much mileage depends on engine and transmission type
 author      : rs-coursera
 job         : Coursera Student
@@ -18,6 +18,8 @@ knit        : slidify::knit2slides
 
 * Pretty much tidy dataset
 * Good to learn plotting and other things
+
+* But how does your car compares to those in the list?
 
 --- .class #id
 
@@ -41,7 +43,7 @@ head(mtcars)
 
 --- .class #id
 
-## Begin with the regressions
+## Setup a linear model for the purpose
 
 
 ```r
@@ -76,4 +78,4 @@ summary(fit)
 
 ## Do some nice plots
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
-* And see, where is your car
+* And see, where is your car :)

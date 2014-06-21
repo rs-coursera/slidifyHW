@@ -1,5 +1,5 @@
 ---
-title       : Car mileage analysis
+title       : Car mileage analysis application
 subtitle    : How much mileage depends on engine and transmission type
 author      : rs-coursera
 job         : Coursera Student
@@ -19,6 +19,8 @@ knit        : slidify::knit2slides
 * Pretty much tidy dataset
 * Good to learn plotting and other things
 
+* But how does your car compares to those in the list?
+
 --- .class #id
 
 ## So what we can do?
@@ -30,7 +32,7 @@ head(mtcars)
 
 --- .class #id
 
-## Begin with the regressions
+## Setup a linear model for the purpose
 
 ```{r}
 fit<-lm(mpg~am+cyl+disp, data=mtcars)
@@ -51,4 +53,4 @@ gp <- ggplot(data=mpgData,
              xlab = "Displacement", ylab="Miles per gallon") 
 gp + geom_point() + stat_smooth(method="lm")
 ```
-* And see, where is your car
+* And see, where is your car :)

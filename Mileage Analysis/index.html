@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Car mileage analysis</title>
+  <title>Car mileage analysis application</title>
   <meta charset="utf-8">
-  <meta name="description" content="Car mileage analysis">
+  <meta name="description" content="Car mileage analysis application">
   <meta name="author" content="rs-coursera">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Car mileage analysis</h1>
+    <h1>Car mileage analysis application</h1>
     <h2>How much mileage depends on engine and transmission type</h2>
     <p>rs-coursera<br/>Coursera Student</p>
   </hgroup>
@@ -51,6 +51,7 @@
 <li><p>Not so many parameters</p></li>
 <li><p>Pretty much tidy dataset</p></li>
 <li><p>Good to learn plotting and other things</p></li>
+<li><p>But how does your car compares to those in the list?</p></li>
 </ul>
 
   </article>
@@ -82,7 +83,7 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Begin with the regressions</h2>
+    <h2>Setup a linear model for the purpose</h2>
   </hgroup>
   <article data-timings="">
     <pre><code class="r">fit&lt;-lm(mpg~am+cyl+disp, data=mtcars)
@@ -123,7 +124,7 @@ summary(fit)
     <p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
 <ul>
-<li>And see, where is your car</li>
+<li>And see, where is your car :)</li>
 </ul>
 
   </article>
@@ -148,7 +149,7 @@ summary(fit)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Begin with the regressions'>
+        data-slide=3 title='Setup a linear model for the purpose'>
          3
       </a>
     </li>
